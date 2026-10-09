@@ -1,0 +1,27 @@
+[project]
+name = "chive-optimization"
+version = "0.1.0"
+description = "Local CHIVE investigation and counterfactual response viewer"
+readme = "README.md"
+authors = [
+    { name = "Evan Conway" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "diff-match-patch>=20241021",
+    "markdown-it-py>=4.2.0",
+]
+
+[project.scripts]
+chive-viewer = "chive_optimization.viewer:main"
+chive-download = "chive_optimization.download:main"
+
+[project.urls]
+Repository = "https://github.com/evan-conway/chive-viewer"
+Issues = "https://github.com/evan-conway/chive-viewer/issues"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Local config and secrets
+.env
+.direnv/
+
+# Local outputs and downloaded data
+results
+*.ckpt
+*.pt
+*.safetensors
+wandb/
+data/
+node_modules/
+test-results/
+dist/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.jsonl
+.env.*
+!.env.example

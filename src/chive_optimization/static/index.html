@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read CHIVE investigations, compare counterfactuals, and explore individual model responses.">
+  <title>CHIVE · Investigation reader</title>
+  <link rel="stylesheet" href="/style.css?v=original-card-2">
+  <script src="/app.js?v=original-card-2" defer></script>
+</head>
+<body>
+  <div id="notice" role="status" hidden></div>
+  <div class="app-layout">
+    <aside class="investigation-sidebar" aria-label="Investigations">
+      <button id="explorer-toggle" class="explorer-toggle" aria-label="Collapse investigation explorer" title="Collapse investigation explorer" aria-expanded="true" aria-controls="investigation-list">‹</button>
+      <div class="sidebar-tools">
+        <div class="section-label">EXPLORE <span id="investigation-count"></span></div>
+        <h1>Investigations</h1>
+        <div class="dataset-control"><label for="dataset">Dataset</label><select id="dataset" aria-label="Dataset"></select></div>
+        <input id="search" type="search" placeholder="Search behaviors, topics, IDs…" aria-label="Search investigations">
+        <div class="filter-row"><button id="shortlist-filter" aria-pressed="false">☆ Shortlist <span id="saved-count">0</span></button></div>
+      </div>
+      <nav id="investigation-list" aria-label="Select an investigation"><p class="empty">Loading datasets…</p></nav>
+      <div class="investigation-pagination" hidden>
+        <div class="page-controls"><button id="previous-page" aria-label="Previous investigations page">←</button><span id="page-label"></span><button id="next-page" aria-label="Next investigations page">→</button></div>
+        <div id="preload-status" role="status"></div>
+      </div>
+    </aside>
+    <main id="workspace"><div class="welcome"><span class="eyebrow">CHIVE / DATA VIEWER</span><h2>Your evidence, in one place.</h2><p>Select an investigation to explore its prompt edits and model responses.</p></div></main>
+  </div>
+</body>
+</html>
